@@ -10,8 +10,9 @@ It is uses layer mask to performance reasons it is optinal but recommended, to u
   Go to ProjectSettings > Physics, set the "Player" layer to collide only default and player in Layer Collision Matrix
   
 Used Assets and Covered Topics :
-  -Shader Graph (Built in Render Pipeline)
-  -Cinemachine 
-  -Final Ik
-  -Easy Decal
-  -Scriptable Objects
+
+  Shader Graph (Built in Render Pipeline), 
+  Cinemachine, 
+  Final Ik, 
+  Easy Decal, 
+  Scriptable Objects
