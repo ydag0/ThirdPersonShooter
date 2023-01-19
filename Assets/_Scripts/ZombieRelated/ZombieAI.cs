@@ -86,11 +86,17 @@ public class ZombieAI : Zombie
     {
         //Shoots A Ray With Layermask
         bool inRange = false;
-
         Ray ray = new(transform.position + Vector3.up *.3f, transform.forward);
-        if(Physics.Raycast(ray ,rayDistance ,layerMask))
+        //Checks if layermask exist
+        if(layerMask != 0)
         {
-            inRange = true;
+            if (Physics.Raycast(ray, rayDistance, layerMask))
+                inRange = true;
+        }
+        else
+        {//cast ray without mask checks tag for player
+            if (Physics.Raycast(ray,out RaycastHit hit, rayDistance))
+                inRange = hit.transform.root.CompareTag(Tags.player);
         }
         return inRange;
     }
